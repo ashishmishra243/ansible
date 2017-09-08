@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="stylesheet" href="css/bootstrap.min.css" />
+                <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+                <link rel="stylesheet" href="css/maruti-style.css" />
+                <link rel="stylesheet" href="css/maruti-media.css" class="skin-color" />
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+
+<title>SONATA-BABEL</title>
+<style>
+#upleft { width:600px; height: 300px;  float:left; }
+#upright { width:900px; height:80px;  float:left }
+</style>
+</head>
+<body>
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse"><ul class="nav">
+  </ul>
+</div>
+
+<div id="user-nav" class="navbar navbar-inverse"><ul class="nav">
+  </ul>
+</div>
+
+<div id='cssmenu'>
+<ul>
+ <li class='active has-sub'><a href='#'><span>Dashboard</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Sonata</span></a>
+            <ul>
+               <li><a href='#'><span>Health Status</span></a></li>
+               <li class='last'><a href='#'><span>Current Issues</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Babel</span></a>
+            <ul>
+               <li><a href='#'><span>Health Status</span></a></li>
+               <li class='last'><a href='#'><span>Current Issues</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+
+<li class='active has-sub'><a href='#'><span>Sonata</span></a>
+        <ul>
+         <li class='has-sub'><a href='#'><span>Development</span></a>
+            <ul>
+               <li><a href='index.php?dev=true'><span>AUSYD23AS34V</span></a></li>
+            </ul>
+         </li>
+
+<li class='has-sub'><a href='#'><span>Test</span></a>
+            <ul>
+               <li><a href='#'><span>AUSYD24AS01V</span></a></li>
+               <li class='last'><a href='#'><span>AUSYD24AS02V</span></a></li>
+               <li class='last'><a href='#'><span>AUSYD24AS05V</span></a></li>
+               <li class='last'><a href='#'><span>AUSYD24AS06V</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Config</span></a>
+            <ul>
+               <li><a href='#'><span>Sev1</span></a></li>
+               <li class='last'><a href='#'><span>Sev2</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>SOT</span></a>
+            <ul>
+               <li><a href='#'><span>Sev1</span></a></li>
+               <li class='last'><a href='#'><span>Sev2</span></a></li>
+            </ul>
+         </li>
+ <li class='has-sub'><a href='#'><span>Migrate</span></a>
+            <ul>
+               <li><a href='#'><span>Sev1</span></a></li>
+               <li class='last'><a href='#'><span>Sev2</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Staging</span></a>
+            <ul>
+               <li><a href='#'><span>Sev1</span></a></li>
+               <li class='last'><a href='#'><span>Sev2</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Production</span></a>
+            <ul>
+               <li><a href='#'><span>Sev1</span></a></li>
+               <li class='last'><a href='#'><span>Sev2</span></a></li>
+            </ul>
+         </li>
+
+      </ul>
+   </li>
+ <li class='active has-sub'><a href='#'><span>Babel</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>DEV</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Prod</span></a>
+            <ul>
+               <li><a href='#'><span>AUMEL21AS69V</span></a></li>
+               <li class='last'><a href='#'><span>AUMEL21AS70V</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul>
+</div>
+
+<div id="Server_Info" class="tabcontent">
+<h3>Welcome To The ADMIN Page ! </h3>
+
+<p>
+<?php
+
+if (isset($_GET['dev'])) {
+  function runMyFunction() {
+}
+#echo -e "******* Hi! Welcome to the ADMIN page.********";
+#echo "<body>";
+echo "<div id='upleft'>";
+echo "<form method='POST' action=''>";
+echo "<input type='radio' name='Start' value='Start'> start the application<br>";
+echo "<input type='radio' name='Stop' value='Stop'> stop the application<br>";
+echo "<input type='radio' name='Process' value='Process'> check the processes consuming more space!!<br>";
+echo "<input type='radio' name='Clustering' value='Clustering' onclick='runMyFunction()'> To check the Clustering!!<br>";
+echo "<input type='radio' name='Status' value='Status'> To check the status of application!!<br>";
+echo "<input type='radio' name='Disk Usage' value='Disk_Usage'> To view the disk space usage!!<br>";
+echo "<input type='submit' value='submit' name='submit>'<br>";
+echo "</form>";
+echo "</div>";
+
+}
+if(isset( $_POST['Start'])){
+echo "Value selected: ".$_POST['Start'];
+$st=$_POST['Start'];
+$cmd="sh hg.sh $st";
+$Ex = shell_exec($cmd);
+echo "<div id='upright'>";
+echo "<div><iframe src='Start.html' height='300' width='700'></iframe></div>";
+echo "</div>";
+}
+elseif(isset( $_POST['Stop'])){
+echo "Value selected: ".$_POST['Stop'];
+$st1=$_POST['Stop'];
+$cmd="sh hg.sh $st1";
+$Ex = shell_exec($cmd);
+#echo $Ex;
+echo "<div id='upright'><div><iframe src='stop.html' height='300' width='800'></iframe></div></div>";
+}
+elseif(isset( $_POST['Process'])){
+echo "Value selected: ".$_POST['Process'];
+$pr=$_POST['Process'];
+$cmd_pr="sh hg.sh $pr";
+$prc = shell_exec($cmd_pr);
+#echo $prc;
+echo "<div id='upright'><div><iframe src='process.html' height='300' width='800'></iframe></div></div>";
+}
+elseif(isset( $_POST['Clustering'])){
+echo "Value selected: ".$_POST['Clustering'];
+$cl=$_POST['Clustering'];
+echo $cl;
+$cmd_cl="sh hg.sh $cl";
+echo $cmd_cl;
+#shell_exec('ssh jboss6@AUSYD23AS34V sh datascript.sh Clustering > cluster3.html');
+#$pcl = shell_exec('ssh jboss6@AUSYD23AS34V sh datascript.sh Clustering > cluster3.html');
+#echo $pcl;
+#print_r($pcl);
+echo "<div id='upright'><div><iframe src='cluster3.html' height='300' width='800'></iframe></div></div>";
+$fileout = file_get_contents('/var/www/html/cluster3.html');
+echo $fileout;
+}
+
+elseif(isset( $_POST['Status'])){
+echo "Value selected: ".$_POST['Status'];
+$ss=$_POST['Status'];
+$cmd_ss="/hg.sh $ss"."<br>";
+$ru = shell_exec($cmd_ss);
+echo "<div id='upright'><div><iframe src='status.html' height='300' width='800'></iframe></div></div>";
+}
+
+elseif(isset( $_POST['Disk_Usage'])){
+echo "Value selected: ".$_POST['Disk_Usage'];
+$di=$_POST['Disk_Usage'];
+$cmd_di="sh hg.sh $di";
+$dus = shell_exec($cmd_di);
+echo "<div id='upright'> <div><iframe src='disk.html' height='300' width='700'></iframe></div></div>";
+}
+
+if (isset($_GET['dev'])) {
+  }
+
+#$fileout = file_get_contents('/var/www/html/out.txt');
+#echo $fileout;
+
+?>
+</div>
+</body>
+</html>
